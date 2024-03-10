@@ -1,3 +1,7 @@
+# Inspired By:
+# https://github.com/lucidrains/vit-pytorch/blob/main/vit_pytorch/vit.py
+# https://github.com/ra1ph2/Vision-Transformer/tree/main
+
 import torch
 from torch import nn
 from torch import optim
