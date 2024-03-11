@@ -58,20 +58,18 @@ pip install pandas
 
 Dataset used: [CIFAR 100](https://www.cs.toronto.edu/~kriz/cifar.html). 
 
-## PointNet Architecture
+## CNN Architecture
 
-![PointNet](/assets/img/pointnet.jpg)
+![cnn](/assets/img/cnn.png)
 
-The classification network takes n points as input, applies input and feature transformations, and then aggregates point features by max pooling. The output is classification scores for k classes.
+xxx
+## ViT Architecture
 
-## PointNN Architecture
+![vit](/assets/img/vit.png)
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="/assets/img/pointnn01.png" alt="NPE" width="400" style="margin-right: 10px;">
-    <img src="/assets/img/pointnn02.png" alt="PMB" width="400"/>
-</div>
+## SWIN ViT Architecture
 
-Non-Parametric Encoder (Left). Zhang et al. (2023) utilized trigonometric functions to encode raw Point Clouds points into high-dimensional vectors in PosE. The vectors then pass through a series of hierarchical non-parametric operations, namely FPS, k-NN, local geometric aggregation, and pooling, where they will be encoded into a global feature $f_G$. Point-Memory Bank (Right). The training set features are passed through the Point-Memory Bank outputting $F_{mem}$, which is later used to classify using similarity matching.
+![swin](/assets/img/swin.png)
 
 
 ## PointNet Robustness Testing: Rotation
