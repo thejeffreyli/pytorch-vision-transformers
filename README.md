@@ -60,7 +60,8 @@ Dataset used: [CIFAR 100](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 ## CNN Architecture
 
-![cnn](/assets/img/cnn.png)
+![cnn](/assets/img/cnn_architecture.png)
+<img src="/assets/img/cnn.png" alt="cnn" width="300"/>
 
 xxx
 ## ViT Architecture
@@ -72,12 +73,47 @@ xxx
 ![swin](/assets/img/swin.png)
 
 
-## PointNet Robustness Testing: Rotation
+## Results
 
-![rotation](/assets/img/pointcloud-rotation.png)
+### CNN Results
+
+| Dataset Type     | Our CNN | ResNet34 |
+|-------------------|---------|----------|
+| Augmentation      | 67%     | 62%      |
+| No Augmentation   | 54%     | 58%      |
+
+Test Accuracy of CNN-based Models
+
+![cnn_loss](/assets/img/cnn_loss.png)
+
+![cnn_acc](/assets/img/cnn_accuracy_all_models.png)
 
 
-Sample point cloud demonstrating a chair undergoing rotations (left to right): 0 degrees, 5 degrees, 30 degrees, 45 degrees, 90 degrees. The model incorrectly classifies the chair starting at the 30 degrees rotation. 
+
+
+### ViT Results
+
+| Trial | Augment | Hybrid | MLP-Head | Patch Size | Embed Dim | Num Layers | Num Heads | Test Acc |
+|-------|---------|--------|----------|------------|-----------|------------|-----------|----------|
+| A     | No      | No     | Original | 16         | 768       | 12         | 12        | 27.7%    |
+| B     | No      | No     | Original | 4          | 768       | 12         | 12        | 31.7%    |
+| C     | No      | No     | Original | 4          | 512       | 12         | 16        | 31.6%    |
+| D     | Yes     | No     | Modified | 4          | 512       | 8          | 16        | 31.9%    |
+| E     | Yes     | Yes    | Original | 7          | 512       | 8          | 16        | 47.7%    |
+| F     | Yes     | Yes    | Modified | 7          | 512       | 12         | 16        | 54.5%    |
+
+
+### SWIN ViT Results
+
+| Name                        | Configuration        | Activation function | Test Acc |
+|-----------------------------|----------------------|----------------------|----------|
+| GELU Original / Original    | `[2, 2, 6, 2]`       | GELU                 | 76.8%    |
+| Simple                      | `[2, 2, 2, 2]`       | GELU                 | 76.38%   |
+| Complex                     | `[2, 2, 10, 2]`      | GELU                 | 77.1%    |
+| GELU                        | `[2, 2, 2, 2]`       | GELU                 | 75.2%    |
+| ReLU                        | `[2, 2, 2, 2]`       | ReLU                 | 73.4%    |
+| Swish                       | `[2, 2, 2, 2]`       | Swish                | 73.7%    |
+
 
 ## PointNet Robustness Testing: Data Corruption
 
@@ -123,7 +159,3 @@ Sample point clouds in the nth stage of the multistage hierarchy undergoing FPS 
 
 
 ## Conclusion
-
-Point cloud processing is important in several fields. In this project, we examined and assessed two different methods for classifying point clouds on a point cloud dataset. The PointNet architecture provides a way to learn global and local point features while also achieving permutation invariance, whereas the Point-NN network offers a way to capture features, like spatial patterns and structures, through a non-parametric approach. Through our experiments, we built and implemented both networks to understand the different mechanisms that allow them to perform classification tasks. Though PointNet achieves higher accuracy when evaluated on the test dataset, we acknowledge the ability for Point-NN to achieve reasonable accuracy with no training and substantially less computational resources. Additionally, we performed robustness tests, specifically data corruption and rotations, in order to evaluate PointNet's ability to classify objects despite changes to orientation and structure. From our tests, we found that PointNet is capable of recognizing global structures of objects despite missing points, but it suffers when large rotations are applied to the point clouds. Lastly, we visually analyzed the internal representations of the multistep hierarchical layers inside the non-parametric encoder to understand how Point-NN captures meaningful representations in point cloud data. 
-
-We have several directions in which we can expand upon our existing work. Firstly, there are several relevant and more advanced architecture capable of processing point cloud data, while also performing other vision tasks, such as segmentation and object detection, that we can further explore. PointNet is a stepping stone to more exciting networks, such as PointNet++, DGCNN, and Point Transformers, in which several changes and design decisions have been made to account for the drawbacks of the original PointNet. Secondly, Point-NN's utility can be expanded upon as a plug-and-play module to boost existing learnable 3D models without further training. Applying Point-NN's ability to capture spatial representations will enhance the shortcomings to baseline models such as PointNet. Thirdly, acquiring access to greater computing resources will allow us to build upon our existing work through being able to keep and run the Transformation-Network as well as the full ModelNet40 point cloud dataset. 
