@@ -21,13 +21,13 @@ There has been a recent interest in applying Transformers to tasks in computer v
 
 - **report:** contains final report submission
 
-- **swin:** contains relevant code for SWIN Transformer model
+- **swin:** contains relevant code for Swin Transformer model
     - datasets.py: loads CIFAR100 data
     - engine.py: trains and evaluates functions used in main.py
     - main.py: passes arguments
-    - swin.py: implementation of SWIN Transformer architecture 
+    - swin.py: implementation of Swin Transformer architecture 
     - utils.py: helper functions, including distributed helpers
-    - vae.py: experiments with SWIN Transformer model as VAE
+    - vae.py: experiments with Swin Transformer model as VAE
     - visualization_swin.ipynb: visualizing plots and experimental results
 
 - **vit:** contains relevant code for ViT Model
@@ -115,7 +115,7 @@ Test Accuracy of CNN-based Models.
 
 (Left) Training loss of ViT-based models. (Right) Testing loss of ViT-based models.
 
-### SWIN ViT Results
+### Swin ViT Classification Results
 
 | Name                        | Configuration        | Activation function | Test Acc |
 |-----------------------------|----------------------|----------------------|----------|
@@ -128,18 +128,28 @@ Test Accuracy of CNN-based Models.
 
 ![SWIN_train_perf_diff_complexity](/assets/img/SWIN_train_perf_diff_complexity.png)
 
+omparison of different Swin architecture variants based on complexity via number of Swin blocks for train set.
+
 ![SWIN_test_perf_diff_complexity](/assets/img/SWIN_test_perf_diff_complexity.png)
+
+Comparison of different Swin architecture variants based on complexity via number of Swin  blocks for test set.
 
 ![SWIN_train_perf_diff_activation](/assets/img/SWIN_train_perf_diff_activation.png)
 
+Comparison of different activation functions used in Swin architecture with additional 2-layer MLP for train set.
+
 ![SWIN_test_perf_diff_activation](/assets/img/SWIN_test_perf_diff_activation.png)
 
+Comparison of different activation functions used in Swin architecture with additional 2-layer MLP for test set.
+
+## Swin ViT as VAE
+
+<img src="/assets/img/SWIN_vae_output.png" alt="SWIN_vae_output" width="400">
 
 
-## PointNet Robustness Testing: Data Corruption
+![SWIN_recon_kld_loss_vae](/assets/img/SWIN_recon_kld_loss_vae.png)
 
-xxx
-
+<img src="/assets/img/SWIN_loss_vae.png" alt="SWIN_loss_vae" width="400">
 
 ## Results
 
