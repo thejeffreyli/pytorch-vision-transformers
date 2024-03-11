@@ -60,10 +60,10 @@ Dataset used: [CIFAR 100](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 ## CNN Architecture
 
-![cnn](/assets/img/cnn_architecture.png)
-<img src="/assets/img/cnn.png" alt="cnn" width="300"/>
+<img src="/assets/img/cnn.png" alt="cnn" width="500"/>
 
-xxx
+<img src="/assets/img/cnn_architecture.png" alt="cnn_architecture" width="300"/>
+
 ## ViT Architecture
 
 ![vit](/assets/img/vit.png)
@@ -82,13 +82,14 @@ xxx
 | Augmentation      | 67%     | 62%      |
 | No Augmentation   | 54%     | 58%      |
 
-Test Accuracy of CNN-based Models
-
-![cnn_loss](/assets/img/cnn_loss.png)
-
-![cnn_acc](/assets/img/cnn_accuracy_all_models.png)
+Test Accuracy of CNN-based Models.
 
 
+<img src="/assets/img/cnn_loss.png" alt="cnn_loss" width="500"/>
+
+<img src="/assets/img/cnn_accuracy_all_models.png" alt="cnn_accuracy_all_models" width="500"/>
+
+Training loss of CNN-based models. Testing accuracy of CNN-based models. 
 
 
 ### ViT Results
