@@ -106,11 +106,14 @@ Test Accuracy of CNN-based Models.
     <img src="/assets/img/vit_test_acc.png" alt="vit_test_acc" width="400">
 </div>
 
+(Left) Training accuracy of ViT-based models. (Right) Testing accuracy of ViT-based models.
+
 <div style="display: flex; justify-content: space-between;">
     <img src="/assets/img/vit_train_loss.png" alt="vit_train_loss" width="400" style="margin-right: 10px;">
     <img src="/assets/img/vit_test_loss.png" alt="vit_test_loss" width="400">
 </div>
 
+(Left) Training loss of ViT-based models. (Right) Testing loss of ViT-based models.
 
 ### SWIN ViT Results
 
@@ -123,48 +126,22 @@ Test Accuracy of CNN-based Models.
 | ReLU                        | `[2, 2, 2, 2]`       | ReLU                 | 73.4%    |
 | Swish                       | `[2, 2, 2, 2]`       | Swish                | 73.7%    |
 
+![SWIN_train_perf_diff_complexity](/assets/img/SWIN_train_perf_diff_complexity.png)
+
+![SWIN_test_perf_diff_complexity](/assets/img/SWIN_test_perf_diff_complexity.png)
+
+![SWIN_train_perf_diff_activation](/assets/img/SWIN_train_perf_diff_activation.png)
+
+![SWIN_test_perf_diff_activation](/assets/img/SWIN_test_perf_diff_activation.png)
+
+
 
 ## PointNet Robustness Testing: Data Corruption
 
-![corruption](/assets/img/pointcloud-sampling.png)
-
-Sample point cloud demonstrating a chair undergoing sampling (left to right): 10000 points, 7500 points, 5000 points, 2500 points, 1000 points, 500 points, 100 points. The model correctly classifies the chair at all different samplings.
+xxx
 
 
 ## Results
-
-### Accuracy and Loss Curves
-
-![acc_curve](/assets/img/pointnetplotacc250.png)
-
-![loss_curve](/assets/img/pointnetplotloss250.png)
-
-PointNet Training and testing curves over 250 epochs.
-
-### Robustness Testing for Best PointNet Model
-
-| Number of Samples | Accuracy | Degree of Rotation | Accuracy |
-|-------------------|----------|---------------------|----------|
-| 10000             | 98.3%    | 0°                  | 98.3%    |
-| 7500              | 98.3%    | 5°                  | 98.1%    |
-| 5000              | 98.3%    | 30°                 | 73.6%    |
-| 2500              | 98.1%    | 45°                 | 43.2%    |
-| 1000              | 97.5%    | 90°                 | 25.3%    |
-| 500               | 97.0%    |                     |          |
-| 100               | 94.6%    |                     |          |
-
-
-### Visualization of Point Cloud Data Encoding by PointNN FPS
-
-![fps](/assets/img/fps.png)
-
-Sample point clouds undergoing four FPS iterations (left to right): 10000 points, 5000 points, 2500 points, 1250 points, 625 points.
-
-### Visualization of Point Cloud Data Encoding by PointNN k-NN
-
-![knn](/assets/img/knn.png) 
-
-Sample point clouds in the nth stage of the multistage hierarchy undergoing FPS and k-NN with k = 90 (from left to right): the point cloud before FPS, the point cloud after FPS, and k-NN where red indicates the nearest neighbors (cluster) of a selected point in the cloud (after FPS).
 
 
 ## Conclusion
