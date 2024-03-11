@@ -84,7 +84,7 @@ Test Accuracy of CNN-based Models.
 
 <div style="display: flex; justify-content: space-between;">
     <img src="/assets/img/cnn_loss.png" alt="cnn_loss" width="400" style="margin-right: 10px;">
-    <img src="/assets/img/cnn_accuracy_all_models.png" alt="cnn_accuracy_all_models" width="400"/>
+    <img src="/assets/img/cnn_accuracy_all_models.png" alt="cnn_accuracy_all_models" width="400">
 </div>
 
 (Left) Training loss of CNN-based models. (Right) Testing accuracy of CNN-based models. 
@@ -100,6 +100,16 @@ Test Accuracy of CNN-based Models.
 | D     | Yes     | No     | Modified | 4          | 512       | 8          | 16        | 31.9%    |
 | E     | Yes     | Yes    | Original | 7          | 512       | 8          | 16        | 47.7%    |
 | F     | Yes     | Yes    | Modified | 7          | 512       | 12         | 16        | 54.5%    |
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/img/vit_train_acc.png" alt="vit_train_acc" width="400" style="margin-right: 10px;">
+    <img src="/assets/img/vit_test_acc.png" alt="vit_test_acc" width="400">
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/img/vit_train_loss.png" alt="vit_train_loss" width="400" style="margin-right: 10px;">
+    <img src="/assets/img/vit_test_loss.png" alt="vit_test_loss" width="400">
+</div>
 
 
 ### SWIN ViT Results
