@@ -62,8 +62,6 @@ Dataset used: [CIFAR 100](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 <img src="/assets/img/cnn.png" alt="cnn" width="500"/>
 
-<img src="/assets/img/cnn_architecture.png" alt="cnn_architecture" width="300"/>
-
 ## ViT Architecture
 
 ![vit](/assets/img/vit.png)
@@ -84,12 +82,12 @@ Dataset used: [CIFAR 100](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 Test Accuracy of CNN-based Models.
 
+<div style="display: flex; justify-content: space-between;">
+    <img src="/assets/img/cnn_loss.png" alt="cnn_loss" width="400" style="margin-right: 10px;">
+    <img src="/assets/img/cnn_accuracy_all_models.png" alt="cnn_accuracy_all_models" width="400"/>
+</div>
 
-<img src="/assets/img/cnn_loss.png" alt="cnn_loss" width="500"/>
-
-<img src="/assets/img/cnn_accuracy_all_models.png" alt="cnn_accuracy_all_models" width="500"/>
-
-Training loss of CNN-based models. Testing accuracy of CNN-based models. 
+(Left) Training loss of CNN-based models. (Right) Testing accuracy of CNN-based models. 
 
 
 ### ViT Results
